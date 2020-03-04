@@ -1,0 +1,12 @@
+<table border="1">
+  <tr>
+    <th>Database</th>
+  </tr>
+  % for prompt in cursor:
+  <tr>
+    <td>${prompt[0]}</td>
+  </tr>
+  % endfor
+</table>
+
+<a href="/">Back</a>
