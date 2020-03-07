@@ -12,8 +12,8 @@ class select_sample:
 
         html_page = params['html']
 
-        cursor = database.sample_db.cursor()
-        cursor.execute("SHOW DATABASES")
+        cursor = database.main_db.cursor()
+        cursor.execute("SELECT username FROM auth")
         listing = list(cursor)
 
         return Template(html_page).render(
